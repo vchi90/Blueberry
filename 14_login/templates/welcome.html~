@@ -9,7 +9,7 @@
 	{% if name %}
 	{{name}}
 	{% endif %}! You have logged in successfully.</h3>
-    <form action="/logout">
+    <form action="/exit">
       <input type="submit" name="logout" value="Logout"> </input>
     </form></center>
     

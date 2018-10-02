@@ -6,7 +6,9 @@
   <body>
     <center>
       <h3>
+	{% if msg %}
 	{{msg}}
+	{% endif %}
       </h3>
       <form action='/exit'>
 	<input type="submit" name="retry" value="Try again"></input>

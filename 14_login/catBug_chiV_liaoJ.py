@@ -17,14 +17,14 @@ app.secret_key = os.urandom(32)
 def login():
     if session != {}:
         return redirect(url_for('welcome_user'))
-    return render_template("login.html",
-                           msg = "Login to begin!")
+    return render_template("login.html")
 
 @app.route('/auth',methods=["POST"])
 def authenticate():
     print(request.form['username'])
     session['username'] = request.form['username']
     session['password'] = request.form['password']
+    print(request.cookies.get('username'))
     username = session['username']
     if not(username in combo):
         return render_template('error.html',
