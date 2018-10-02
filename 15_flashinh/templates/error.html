@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+<html>
+	{% extends 'login.html' %}
+	{% block changeTitle %}
+	<title>Login Failed</title>
+	  {% endblock %}
+	{% block msg %}
+	  <h3>"Error! {{msg}}</h3>
+	  {% endblock %}
+</html>
+

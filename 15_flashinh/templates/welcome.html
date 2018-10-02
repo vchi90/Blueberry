@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+	{% extends 'login.html' %}
+	{% block changeTitle %}
+	<title>Welcome</title>
+	  {% endblock %}
+	{% block msg %} {% endblock %}
+	{% block welcomeFactor %}
+	  {% set messages = get_flashed_messages() %}
+		{% for message in messages %}
+			<p>{{message}}</p>
+		{% endfor %}
+      <h3> "{{name}}, you have logged in successfully."</h3>
+    <form action="/exit">
+      <input type="submit" name="logout" value="Logout"> </input>
+    </form> <br>
+	{% endblock %}
+</html>
+
