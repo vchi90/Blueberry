@@ -4,8 +4,7 @@
 	{% block changeTitle %}
 	<title>Welcome</title>
 	  {% endblock %}
-	{% block msg %} {% endblock %}
-	{% block welcomeFactor %}
+	{% block content %}
 	  {% set messages = get_flashed_messages() %}
 		{% for message in messages %}
 			<p>{{message}}</p>

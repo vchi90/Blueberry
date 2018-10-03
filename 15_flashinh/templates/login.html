@@ -7,11 +7,11 @@
   </head>
   <body>
 	<center>
-	<img src="https://i.ytimg.com/vi/S6kNy0Kforo/maxresdefault.jpg" style="width:128px;height:72px;">
+	  <img src="https://i.ytimg.com/vi/S6kNy0Kforo/maxresdefault.jpg" style="width:128px;height:72px;">
+	{% block content %}
 	{% block msg %}
       <h3>"Hello Bravest Warrior, Catbug Speaking! Log in to begin"</h3>
 	  {% endblock %}
-	  {% block welcomeFactor %}
       <form action="/auth" method="POST">
 	username <br>
 	<input type="text" name="username"></input>

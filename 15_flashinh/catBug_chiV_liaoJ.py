@@ -1,7 +1,7 @@
 #Team Catbug -- Vincent Chi, Joyce Liao
 #SoftDev1 pd8
-#K15 -- Oh yes, perhaps I do…
-#2018-10-02
+#K15 -- Oh yes, perhaps I do...
+#2018-10-03
 
 from flask import Flask, render_template, request, flash, \
 	session, url_for, redirect
@@ -23,11 +23,11 @@ def login():
 def authenticate():
     #print(request.form['username'])
     if not(request.form['username'] in combo):
-        return render_template('error.html',
-                               msg = " That username does not exist!\"")
+        flash('That username does not exist!')
+        return render_template('error.html')
     elif request.form['password'] != combo['softdev']:
-        return render_template('error.html',
-                               msg = " That is the wrong password!\"")
+        flash('That is the wrong password!')
+        return render_template('error.html')
     else:
         flash('Welcome, Bravest Warrior!')
         session[request.form['username']] = request.form['password']

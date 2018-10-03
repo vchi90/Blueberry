@@ -5,7 +5,13 @@
 	<title>Login Failed</title>
 	  {% endblock %}
 	{% block msg %}
-	  <h3>"Error! {{msg}}</h3>
-	  {% endblock %}
+	<h3>
+	  "Error!
+	  {% set messages = get_flashed_messages() %}
+	  {% for each in messages %}
+	  {{each}}"
+	  {% endfor %}
+	</h3>
+	{% endblock %}
 </html>
 
