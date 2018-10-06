@@ -17,7 +17,7 @@ c = db.cursor()               #facilitate db ops
 c.execute("CREATE TABLE peeps (name TEXT, age INTEGER, id INTEGER PRIMARY KEY);")    #create peeps table
 c.execute("CREATE TABLE courses (code TEXT, mark INTEGER, id INTEGER);")    #create courses table
 
-with open('peeps.csv') as csvfile: #opens the file for reading as a csvfile
+with open('data/peeps.csv') as csvfile: #opens the file for reading as a csvfile
     reader = csv.DictReader(csvfile)
     for row in reader:
         c.execute("INSERT INTO peeps VALUES(" +
@@ -25,8 +25,9 @@ with open('peeps.csv') as csvfile: #opens the file for reading as a csvfile
 		"," + row["age"] +
 		"," + row["id"] + ")")
 
-with open('courses.csv') as csvfile: #opens the file for reading as a csvfile
+with open('data/courses.csv') as csvfile: #opens the file for reading as a csvfile
     reader = csv.DictReader(csvfile)
+    for row in reader:
         c.execute("INSERT INTO courses VALUES(" +
 		"'" + row["code"] + "'" +
 		"," + row["mark"] +
