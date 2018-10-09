@@ -46,12 +46,18 @@ def idTable(tblname):
           insrtcommand = insertHdr + "('{0}','{1}')".format(tup[0],tup[1])
           c.execute(insrtcommand)
           
+#adds row to courses
+def facilitate(code, mark, id):
+    c.execute("INSERT INTO courses VALUES(?,?,?)", (str(code), int(mark), int(id)))
+	
+	
 #create tables for peeps.csv
 createTable('data/peeps.csv',"peeps","name","age","id")
 #create table for courses.csv
 createTable('data/courses.csv',"courses","code","mark","id")
 gradeLookup()
 idTable("peeps_avg")
+facilitate("test", 0, 1)
 
 
 #==========================================================
