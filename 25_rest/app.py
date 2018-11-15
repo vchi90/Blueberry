@@ -1,7 +1,7 @@
 #Vincent Chi
 #SoftDev1 pd08
-#K24- A RESTful Journey Skyward
-#2018-11-13
+#K25- Getting More REST
+#2018-11-14
 
 import urllib.request
 import json
