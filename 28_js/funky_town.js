@@ -4,15 +4,17 @@
  // 2018-12-18
 
 
-var fibonacci = (args) =>{
-  if (args < 0){
-      return 0;
-  };
-  if (args < 2){
-      return args;
+var fib=function fibonacci(n){
+  if (n == 0){
+    return 0;
   }
-  return fibonacci(args - 1) * args;
-};
+  else if (n == 1 || n == 2){
+    return 1;
+  }
+  else{
+    return fibonacci(n-1) + fibonacci(n-2);
+  };
+}
 
 var gcd = (a,b)=> {
     if (b == 0){
