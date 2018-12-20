@@ -32,8 +32,8 @@ var fibButton = document.getElementById("fib");
 var fibNum = document.getElementById("fib-num");
 var fibResult = document.getElementById("fib-result");
 fibButton.addEventListener("click", () => {
-	console.log(fibonacci(fibNum.value));
-    fibResult.innerHTML = `result: ${fibonacci(fibNum.value)}`;
+    console.log(`fib result: ${fibonacci(fibNum.value)}`);
+    fibResult.innerHTML = `fib result: ${fibonacci(fibNum.value)}`;
 });
 
 var gcdButton = document.getElementById("gcd");
@@ -41,13 +41,13 @@ var gcdNum0 = document.getElementById("gcd-num0");
 var gcdNum1 = document.getElementById("gcd-num1");
 var gcdResult = document.getElementById("gcd-result");
 gcdButton.addEventListener("click", () => {
-	//console.log(gcd(gcdNum0.value,gcd.Num1.value));
-    gcdResult.innerHTML = `result: ${gcd(gcdNum0.value, gcdNum1.value)}`;
+    console.log(`gcd result: ${gcd(gcdNum0.value, gcdNum1.value)}`);
+    gcdResult.innerHTML = `gcd result: ${gcd(gcdNum0.value, gcdNum1.value)}`;
 });
 
 var studentBut = document.getElementById("rand-student");
 var student = document.getElementById("student");
 studentBut.addEventListener("click", () => {
-	console.log(randomStudent());
-    student.innerHTML = `random student: ${randomStudent()}`;
+    console.log(`result: ${randomStudent()}`);
+    student.innerHTML = `result: ${randomStudent()}`;
 })
