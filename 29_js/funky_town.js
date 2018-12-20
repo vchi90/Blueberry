@@ -3,33 +3,33 @@
  // K28 -- Sequential Progression
  // 2018-12-18
 
- var fib = (n) => {
-     return fibHelp(1, 0, n);
- }
 
- // Helper for fibonacci
- var fibHelp = (startNum, sumSoFar, numTimes) => {
-     if (numTimes == 0){
-         return sumSoFar;
-     }
-     return fibHelp(startNum + sumSoFar, startNum, numTimes - 1);
- }
-
-var gcd = (a,b)=> {
-    if (b == 0){
-        return a;
-    };
-    if (a < b){
-        return gcd(b,a);
-    };
-    return (a-b,b);
+var fibonacci = function(n){
+	if (n < 2)
+		return n;
+	else
+		return fibonacci(n - 1) + fibonacci(n - 2);
 };
 
-var randomStudent = (list) =>{
-  return list[Math.floor(Math.random()*list.length)];
+function gcd(a, b)
+{
+    temp = b;
+    while(b != 0)
+    {
+        temp = b;
+        b = a % b;
+        a = temp;
+    }
+    return a;
+};
+
+students = ["dog", "cat", "tbm", "dw", "k"];
+
+var randomStudent = () =>{
+  return students[Math.floor(Math.random()*students.length)];
 };
 
 var fibButton = document.getElementById("fib");
 fibButton.addEventListener("click", () => {
-  console.log(fib(5));
+  console.log(fibonacci(5));
 });
