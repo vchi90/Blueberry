@@ -57,5 +57,3 @@ var fib = (n) => {
         return hey[(inc - 1) % 2];
     }
 }
-
-
